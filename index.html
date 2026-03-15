@@ -1,65 +1,217 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 
-<title>Soffiatul Fitriyah | Data Analyst Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Soffiatul Fitriyah | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
 body{
-font-family: Arial;
-margin:0;
-background:#f5f7fa;
-}
-
-header{
-background:#2c3e50;
+background:#0f172a;
 color:white;
-padding:60px;
-text-align:center;
+line-height:1.6;
 }
 
-header h1{
-margin:0;
-}
+/* NAVBAR */
 
 nav{
-background:#34495e;
+position:fixed;
+top:0;
+width:100%;
+background:#020617;
+display:flex;
+justify-content:center;
+gap:30px;
 padding:15px;
-text-align:center;
+z-index:1000;
+flex-wrap:wrap;
 }
 
 nav a{
 color:white;
-margin:0 15px;
 text-decoration:none;
-font-weight:bold;
+font-weight:500;
+transition:0.3s;
 }
 
-.container{
-max-width:900px;
-margin:auto;
+nav a:hover{
+color:#60a5fa;
+}
+
+/* HERO */
+
+header{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:linear-gradient(135deg,#2563eb,#7c3aed);
+}
+
+header h1{
+font-size:clamp(30px,5vw,55px);
+margin-bottom:10px;
+}
+
+header p{
+max-width:600px;
+opacity:0.9;
+margin-bottom:20px;
+}
+
+.btn{
 background:white;
-padding:40px;
+color:black;
+padding:12px 22px;
+border-radius:6px;
+text-decoration:none;
+font-weight:bold;
+margin:5px;
+display:inline-block;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+/* SECTIONS */
+
+section{
+max-width:1100px;
+margin:auto;
+padding:80px 20px;
 }
 
 h2{
-border-bottom:2px solid #eee;
+margin-bottom:30px;
+border-bottom:1px solid #334155;
 padding-bottom:10px;
+font-size:clamp(24px,4vw,32px);
+}
+
+/* SKILLS */
+
+.skills{
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+}
+
+.skill{
+background:#1e293b;
+padding:10px 18px;
+border-radius:6px;
+transition:0.3s;
+}
+
+.skill:hover{
+background:#2563eb;
+transform:translateY(-3px);
+}
+
+/* PROJECTS GRID */
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
 }
 
 .project{
-background:#f8f8f8;
-padding:15px;
-margin-top:20px;
-border-radius:8px;
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+transition:0.3s;
+cursor:pointer;
 }
 
-footer{
-background:#2c3e50;
-color:white;
+.project:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 25px rgba(0,0,0,0.5);
+}
+
+.project img{
+width:100%;
+border-radius:8px;
+margin-top:10px;
+}
+
+/* METRICS */
+
+.metrics{
+display:flex;
+justify-content:space-around;
 text-align:center;
-padding:20px;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+.metric{
+margin:15px;
+}
+
+.metric h3{
+font-size:clamp(28px,4vw,40px);
+color:#60a5fa;
+}
+
+/* CONTACT */
+
+.contact p{
+margin-top:10px;
+}
+
+/* FOOTER */
+
+footer{
+background:#020617;
+text-align:center;
+padding:40px;
+margin-top:60px;
+font-size:14px;
+}
+
+/* MOBILE NAV */
+
+@media(max-width:600px){
+
+nav{
+gap:15px;
+font-size:14px;
+}
+
+header{
+padding-top:100px;
+}
+
+.projects{
+grid-template-columns:1fr;
+}
+
+.skills{
+justify-content:center;
+}
+
 }
 
 </style>
@@ -67,18 +219,6 @@ padding:20px;
 </head>
 
 <body>
-
-<header>
-
-<h1>Soffiatul Fitriyah</h1>
-
-<p>System Analyst | Data Analyst | Power BI | SQL</p>
-
-<p>
-Transforming data into meaningful insights through analytics and dashboards
-</p>
-
-</header>
 
 <nav>
 
@@ -89,18 +229,29 @@ Transforming data into meaningful insights through analytics and dashboards
 
 </nav>
 
-<div class="container">
+<header>
+
+<h1>Nurul Soffiatul Fitriyah</h1>
+
+<p>System Analyst | Data Analyst | Power BI</p>
+
+<p>
+Translating business requirements into structured system solutions and data-driven insights
+</p>
+
+<a class="btn" href="resume.pdf">Download CV</a>
+<a class="btn" href="#projects">View Projects</a>
+
+</header>
 
 <section id="about">
 
-<h2>About Me</h2>
+<h2>About</h2>
 
 <p>
-System Analyst at the Medical Device Authority (MDA) with experience in data analytics, system documentation, and IT project support.
-</p>
-
-<p>
-Interested in business intelligence, dashboard development, and data-driven decision making.
+System Analyst at Medical Device Authority specialising in requirements engineering,
+workflow analysis and system documentation (BRS, SRS, SDS). Experienced in SDLC,
+data analytics dashboards and enterprise system implementation.
 </p>
 
 </section>
@@ -109,15 +260,18 @@ Interested in business intelligence, dashboard development, and data-driven deci
 
 <h2>Skills</h2>
 
-<ul>
-<li>Power BI</li>
-<li>SQL</li>
-<li>Microsoft Excel</li>
-<li>Data Analysis</li>
-<li>Data Visualisation</li>
-<li>System Analysis</li>
-<li>BRS / SRS / SDS Documentation</li>
-</ul>
+<div class="skills">
+
+<div class="skill">Power BI</div>
+<div class="skill">SQL</div>
+<div class="skill">Excel</div>
+<div class="skill">Python</div>
+<div class="skill">System Analysis</div>
+<div class="skill">Requirements Engineering</div>
+<div class="skill">Data Analytics</div>
+<div class="skill">UAT Testing</div>
+
+</div>
 
 </section>
 
@@ -125,56 +279,86 @@ Interested in business intelligence, dashboard development, and data-driven deci
 
 <h2>Projects</h2>
 
+<div class="projects">
+
 <div class="project">
 
-<h3>Sales Performance Dashboard</h3>
+<h3>MEDCAST 3.0</h3>
 
 <p>
-Interactive Power BI dashboard analysing sales performance, KPIs and product trends.
+Medical Device Centralised Online Application System supporting regulatory workflows.
 </p>
+
+<img src="dashboard1.png">
 
 </div>
 
 <div class="project">
 
-<h3>Data Cleaning & Analysis</h3>
+<h3>Parkinson Disease Detection</h3>
 
 <p>
-Data preparation and exploratory analysis using Excel and Python.
+Machine learning model detecting Parkinson disease using voice analysis.
 </p>
+
+<img src="dashboard2.png">
 
 </div>
 
 <div class="project">
 
-<h3>Healthcare Analytics Dashboard</h3>
+<h3>Customer Churn Prediction</h3>
 
 <p>
-Power BI dashboard analysing healthcare data trends and insights.
+Predictive analytics model analysing telecom churn patterns.
 </p>
+
+</div>
 
 </div>
 
 </section>
 
-<section id="contact">
+<section>
+
+<h2>Impact Metrics</h2>
+
+<div class="metrics">
+
+<div class="metric">
+<h3>3+</h3>
+<p>Analytics Dashboards</p>
+</div>
+
+<div class="metric">
+<h3>5+</h3>
+<p>System Projects</p>
+</div>
+
+<div class="metric">
+<h3>1+</h3>
+<p>Years Experience</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact" class="contact">
 
 <h2>Contact</h2>
 
-<p>LinkedIn: linkedin.com/in/soffiatulfitriyah</p>
-
-<p>Email: your@email.com</p>
+<p>Email: nsoffiatulfitriyah@gmail.com</p>
+<p>LinkedIn: linkedin.com/in/soffiatul-fitriyah-n-258a8526a</p>
 
 </section>
 
-</div>
-
 <footer>
 
-<p>© 2026 Soffiatul Fitriyah Portfolio</p>
+<p>© 2026 Nurul Soffiatul Fitriyah</p>
+<p>Built with HTML, CSS & GitHub Pages</p>
 
 </footer>
 
 </body>
-
 </html>
